@@ -1,25 +1,28 @@
 * {
     font-family:sans-serif;
+    box-sizing: border-box;
 }
 body{
     width: 80%;
     margin: auto;
     margin-top: 2em;
 }
-div {
+
+/*NAV*/
+
+#nav div {
     font-weight: bold;
 }
-ul {
+#nav ul {
     background-color: lightgrey;
     list-style: none;
     padding: 0;
     display: flex;
 }
-li {
+#nav li {
     background-color: black;
     color: white;
     border: 1px solid lightgrey;
-    height: 1em;
     padding: 1em;
 }
 #number2 {
@@ -37,4 +40,60 @@ li {
 #number6 li {
     flex:auto;
     text-align: center;
+}
+
+/*LAYOUT*/
+/*Les class layout sont communes pour tous les styles sont à ne pas changer*/
+.layout{
+    width: 50%;
+    min-height: 500px;
+    padding: 1em;
+    background-color: silver;
+    border: 1px solid white;
+    margin: auto;
+}
+.layout section {
+    display: flex;
+    height: 100vh;
+    border: 1px solid red;
+}
+
+.layout nav,.layout main,.layout aside{
+    background-color: gray;
+    border: 1px solid silver;
+    padding: 1.5em;
+}
+.layout nav{
+    width: 100%;
+}
+.layout main{
+    width: 60%;
+}
+.layout aside{
+    width: 40%;
+}
+
+/*changer la classe style dans le html pour voir les changements*/
+
+.style1 main{
+    align-self: stretch;
+}
+.style1 aside{
+    align-self: flex-start;
+}
+
+.style2 {
+    align-items: stretch;
+}
+
+.style3 aside{
+    order:1;
+    align-self: flex-start;
+}
+
+.style4 main{
+    align-self: stretch;
+}
+.style4 aside{
+    order:1;
 }
