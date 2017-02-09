@@ -97,3 +97,21 @@ body{
 .style4 aside{
     order:1;
 }
+
+@media screen and (max-width:400px) {
+    .layout{
+        width: 100%;
+    }
+    .layout section {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+    }
+    .layout main{
+        width: 100%;
+    }
+    .layout aside{
+        width: 100%;
+        order: 0;
+    }
+}
